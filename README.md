@@ -25,3 +25,21 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## JSON-SERVER
+
+Necessário instalar a biblioteca json-server para manipulação dos dados.
+
+npm install -g json-server
+
+## Executar o servidor json-server
+
+json-server --watch db.json
+
+## Executar o projeto
+
+ng serve --open
+
+## URL
+
+http://localhost:4200/

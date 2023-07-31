@@ -1,0 +1,54 @@
+<div mat-dialog-title>
+    <h1>Adicionar Paciente</h1>
+</div>
+<form [formGroup]="pacienteForm" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content class="content">
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Nome</mat-label>
+                <input matInput type="text" placeholder="Ex: João" formControlName="nome">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Sobrenome</mat-label>
+                <input matInput type="text" placeholder="Ex: Silva" formControlName="sobrenome">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" placeholder="Ex: Joao@gmail.com" formControlName="email">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Data de nascimento</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="dataNascimento">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-label>Genero</mat-label>
+            <mat-radio-group aria-label="Select an option" formControlName="genero">
+                <mat-radio-button value="Masculino" [checked]="true">Masculino</mat-radio-button>
+                <mat-radio-button value="Feminino">Feminino</mat-radio-button>
+                <mat-radio-button value="Outro">Outro</mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>CPF</mat-label>
+                <input matInput type="text" placeholder="Ex: 000.000.000-00" formControlName="cpf">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Plano</mat-label>
+                <mat-select formControlName="plano">
+                    <mat-option *ngFor="let val of plano" [value]="val">{{val}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div mat-dialog-actions class="actions">
+        <button mat-raised-button type="button" [mat-dialog-close]="false">Cancelar</button>
+        <button mat-raised-button color="primary" type="submit">{{data ? 'Editar' : 'Adicionar'}}</button>
+    </div>
+</form>

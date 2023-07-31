@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "pacientes": [
+    {
+      "nome": "fadf",
+      "sobrenome": "dfasdfasd",
+      "email": "asdfasdf",
+      "dataNascimento": "2023-07-11T03:00:00.000Z",
+      "genero": "masc",
+      "cpf": "a123412",
+      "plano": "SulAmérica",
+      "id": 3
+    },
+    {
+      "nome": "deniel",
+      "sobrenome": "asdfa",
+      "email": "asdf",
+      "dataNascimento": "2023-07-04T03:00:00.000Z",
+      "genero": "fem",
+      "cpf": "12341234",
+      "plano": "Bradesco",
+      "id": 4
+    },
+    {
+      "nome": "xcvz",
+      "sobrenome": "sdfgsd",
+      "email": "gsdfg",
+      "dataNascimento": "2023-07-10T03:00:00.000Z",
+      "genero": "fem",
+      "cpf": "12341",
+      "plano": "Amil",
+      "id": 5
+    }
+  ]
+}
